@@ -1,3 +1,5 @@
+import React from 'react';
+
 const baseUrl = 'https://i.imgur.com/';
 const person = {
   name: 'Gregorio Y. Zara',
@@ -12,10 +14,11 @@ const person = {
 export default function TodoList() {
   return (
     <div style={person.theme}>
-      <h1>Person Name's Todos</h1>
-      <img className="avatar"
-      src="baseURL + imageID + imageSize + .jpg"
-      alt="Person's Name"
+      <h1>{person.name}'s Todos</h1>
+      <img
+        className="avatar"
+        src={`${baseUrl}${person.imageId}${person.imageSize}.jpg`}
+        alt={person.name}
       />
     </div>
   );
