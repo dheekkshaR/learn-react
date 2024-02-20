@@ -19,7 +19,9 @@ export default function List() {
           <li key={artist.id}>
             {artist.name}{' '}
             <button onClick={() => {
-              artists.splice(artist.id, 1)
+              const artistsA=[...artists]
+              artistsA.splice(artist.id, 1)
+              setArtists(artistsA)
             }}>
               Delete
             </button>
